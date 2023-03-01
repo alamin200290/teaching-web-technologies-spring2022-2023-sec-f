@@ -1,6 +1,14 @@
 <?php 
     session_start();
-    print_r($_SESSION);
+    //print_r($_SESSION);
+    
+    if(isset($_REQUEST['msg'])){
+        if($_REQUEST['msg'] == "error"){
+            echo "Invalid user/password, please register first!";
+        }else{
+            header('location: login.php');
+        }
+    }
 ?>
 
 <html>

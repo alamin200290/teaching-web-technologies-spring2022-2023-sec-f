@@ -10,9 +10,9 @@
         if($username == "" && $password == "" && $email == "") {
             echo "Null value ..";
         }else{
-           $file = fopen('user.txt', 'a');
-           $user = $username."|".$password."|".$email."\r\n";
-           fwrite($file, $user);
+            $file = fopen('user.txt', 'a');
+            $user = $username."|".$password."|".$email."\r\n";
+            fwrite($file, $user);
             header('location: login.php');
         }
     }else{
